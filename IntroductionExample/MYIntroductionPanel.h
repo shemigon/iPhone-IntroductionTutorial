@@ -31,11 +31,14 @@
 
 //Title
 @property (nonatomic, retain) NSString *Title;
+@property (nonatomic, retain) UIColor *TitleColor;
 
 //Description
 @property (nonatomic, retain) NSString *Description;
+@property (nonatomic, retain) UIColor *DescriptionColor;
 
 //Custom init method
+-(id)initWithimage:(UIImage *)image title:(NSString *)title description:(NSString *)description titleColor:(UIColor *)titleColor descriptionColor:(UIColor *)descriptionColor;
 -(id)initWithimage:(UIImage *)image title:(NSString *)title description:(NSString *)description;
 -(id)initWithimage:(UIImage *)image description:(NSString *)description;
 -(id)initWithContentView:(UIView*)view;

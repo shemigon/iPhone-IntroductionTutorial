@@ -42,9 +42,11 @@
     
     //STEP 1 Construct Panels
     MYIntroductionPanel *panel = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"SampleImage1"] title:@"Sample Title" description:@"Welcome to MYIntroductionView, your 100 percent customizable interface for introductions and tutorials! Simply add a few classes to your project, and you are ready to go!" ];
+    panel.TitleColor = [UIColor redColor];
+    panel.DescriptionColor = [UIColor blackColor];
     
     //You may also add in a title for each panel
-    MYIntroductionPanel *panel2 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"SampleImage2"] title:@"Your Ticket!" description:@"MYIntroductionView is your ticket to a great tutorial or introduction!"];
+    MYIntroductionPanel *panel2 = [[MYIntroductionPanel alloc] initWithimage:[UIImage imageNamed:@"SampleImage2"] title:@"Your Ticket!" description:@"MYIntroductionView is your ticket to a great tutorial or introduction!" titleColor:[UIColor orangeColor] descriptionColor:[UIColor brownColor]];
     
     //STEP 2 Create IntroductionView
     /*A standard version*/

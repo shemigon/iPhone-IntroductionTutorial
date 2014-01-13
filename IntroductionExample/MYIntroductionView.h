@@ -91,6 +91,9 @@ typedef enum {
 @property (nonatomic, retain) UIPageControl *PageControl;
 @property (nonatomic, retain) UIButton *SkipButton;
 
+//Colors
+@property (nonatomic, retain) UIColor *titleColor;
+
 //Nuts & Bolts
 @property BOOL device;
 @property BOOL device_orientation;

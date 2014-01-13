@@ -29,9 +29,7 @@
 #define HEADER_VIEW_HEIGHT 45
 #define PAGE_CONTROL_PADDING 1
 #define TITLE_FONT [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.0]
-#define TITLE_TEXT_COLOR [UIColor whiteColor]
 #define DESCRIPTION_FONT [UIFont fontWithName:@"HelveticaNeue-Light" size:13.0]
-#define DESCRIPTION_TEXT_COLOR [UIColor whiteColor]
 
 @implementation MYIntroductionView
 @synthesize delegate, device, device_orientation;
@@ -363,7 +361,7 @@
         panelTitleLabel.text = panel.Title;
         panelTitleLabel.numberOfLines = 0;
         panelTitleLabel.font = TITLE_FONT;
-        panelTitleLabel.textColor = TITLE_TEXT_COLOR;
+        panelTitleLabel.textColor = panel.TitleColor;
         panelTitleLabel.backgroundColor = [UIColor clearColor];
         panelTitleLabel.textAlignment = NSTextAlignmentCenter;
         panelTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -385,7 +383,7 @@
     UILabel *panelDescriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.ContentScrollView.frame.size.width, 0)];
     panelDescriptionLabel.backgroundColor = [UIColor clearColor];
     panelDescriptionLabel.textAlignment = NSTextAlignmentCenter;
-    panelDescriptionLabel.textColor = DESCRIPTION_TEXT_COLOR;
+    panelDescriptionLabel.textColor = panel.DescriptionColor;
     panelDescriptionLabel.font = DESCRIPTION_FONT;
     panelDescriptionLabel.numberOfLines = 0;
     panelDescriptionLabel.text = panel.Description;

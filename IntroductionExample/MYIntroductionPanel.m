@@ -26,7 +26,29 @@
 #import "MYIntroductionPanel.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define TITLE_TEXT_COLOR [UIColor whiteColor]
+#define DESCRIPTION_TEXT_COLOR [UIColor whiteColor]
+
 @implementation MYIntroductionPanel
+
+@synthesize TitleColor = _TitleColor, Description = _Description;
+
+-(id)initWithimage:(UIImage *)image title:(NSString *)title description:(NSString *)description titleColor:(UIColor *)titleColor descriptionColor:(UIColor *)descriptionColor{
+    
+    if (self = [super init]) {
+        //Set panel Image
+        [self setupPanelContentViewWithImage:image];
+        
+        self.Title = title;
+        self.TitleColor = titleColor;
+        
+        //Set panel Description
+        self.Description = [[NSString alloc] initWithString:description];
+        self.DescriptionColor = descriptionColor;
+    }
+    return self;
+}
+
 
 -(id)initWithimage:(UIImage *)image title:(NSString *)title description:(NSString *)description{
     if (self = [super init]) {
@@ -69,6 +91,14 @@
     self.PanelContentView.backgroundColor = [UIColor clearColor];
     self.PanelContentView.layer.cornerRadius = 3;
     self.PanelContentView.clipsToBounds = YES;
+}
+
+-(UIColor *) TitleColor {
+    return _TitleColor ? _TitleColor : TITLE_TEXT_COLOR;
+}
+
+-(UIColor *) DescriptionColor {
+    return _DescriptionColor ? _DescriptionColor : DESCRIPTION_TEXT_COLOR;
 }
 
 @end
